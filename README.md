@@ -4,7 +4,7 @@
 ecommerce api using Node js, Express js, and Mongoose.
 
 # Technology
-Node.js
+* Node.js
 MongoDB 
 Express 
 joi
