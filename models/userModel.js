@@ -26,6 +26,9 @@ const userSchema = new mongoose.Schema(
     phone: {
       type: String,
     },
+    address: {
+      type: String,
+    },
     resetPasswordLink: {
       data: String,
       default: "",
