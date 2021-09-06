@@ -18,6 +18,11 @@ const orderSchema = new Schema({
     required: true,
     ref: "User",
   },
+  status: {
+    type: String,
+    enum: ["Initiated", "In Progress", "Delevered", "Cancel"],
+    default: "Initiated",
+  },
 });
 
 module.exports = mongoose.model("Order", orderSchema);
