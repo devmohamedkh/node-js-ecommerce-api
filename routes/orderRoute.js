@@ -13,19 +13,20 @@ app.get("/", verifyUser, orderController.getOrder);
 
 /*
     method => post 
-    route  => api/product/
+    route  => api/order/
     accses => all 
     desc   => to create product
 */
-app.post("/", orderController.createOrder);
+app.post("/", verifyUser, orderController.createOrder);
 
 /*
     method => delete 
-    route  => api/cart/empty-cart
-    accses => only user have the account  
-    desc   => to delete all product frome cart
+    route  => 
+    accses => 
+    desc   => 
 */
-app.delete("/cansel-order", verifyUser, cartController.emptyCart);
+///not working
+// app.delete("/cansel-order", verifyUser, orderController.canselOrder);
 
 /*
     method => post 
@@ -33,6 +34,7 @@ app.delete("/cansel-order", verifyUser, cartController.emptyCart);
     accses => only user have the account 
     desc   => to create product
 */
-app.delete("/:id", verifyUser, cartController.RemoveProductfromeCart);
+///not working
+// app.delete("/:id", verifyUser, orderController.RemoveProductfromeOrder);
 
 module.exports = app;

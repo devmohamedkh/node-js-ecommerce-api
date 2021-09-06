@@ -27,7 +27,7 @@ app.post("/", productController.addProduct);
 /*
     method => patch 
     route  => api/product/id
-    accses => only user have the account  
+    accses => Only used product owner 
     desc   => to updet product
 */
 app.patch("/:id", verifyUser, productController.updateProduct);
@@ -35,7 +35,7 @@ app.patch("/:id", verifyUser, productController.updateProduct);
 /*
     method => delete 
     route  => api/product/id
-    accses => only user have the account  
+    accses => Only used product owner
     desc   => to delete product
 */
 app.delete("/:id", verifyUser, productController.deleteProductById);

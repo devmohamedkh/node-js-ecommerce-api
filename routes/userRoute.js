@@ -1,6 +1,6 @@
 const app = require("express").Router();
 const userController = require("../controllers/userController");
-const { verifyUser, verifyAdmin } = require("../middleware/verifyToken");
+const { verifyUser } = require("../middleware/verifyToken");
 
 /*
     method => get 
@@ -16,13 +16,6 @@ app.get("/", userController.getAllUsers);
     desc   => to get all users
 */
 app.get("/:id", userController.getUserById);
-/*
-    method => post 
-    route  => api/users/
-    accses => all 
-    desc   => to create a user
-*/
-app.post("/", (req, res) => {});
 
 /*
     method => patch 

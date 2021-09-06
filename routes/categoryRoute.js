@@ -27,7 +27,7 @@ app.post("/", verifyAdmin, categoryController.addCategory);
 /*
     method => patch 
     route  => api/category/id
-    accses => only user have the account  
+    accses => only admin  
     desc   => to updet category
 */
 app.patch("/:id", verifyAdmin, categoryController.updateCategory);
@@ -35,7 +35,7 @@ app.patch("/:id", verifyAdmin, categoryController.updateCategory);
 /*
     method => delete 
     route  => api/category/id
-    accses => only user have the account  
+    accses => only admin  
     desc   => to delete category
 */
 app.delete("/:id", verifyAdmin, categoryController.deleteCategoryById);

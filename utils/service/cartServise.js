@@ -1,7 +1,7 @@
 const Cart = require("../../models/cartModels");
 
 exports.getCart = async (userId) => {
-  return await Cart.findOne({ userId });
+  return await Cart.findOne({ userId }).populate("items.productId");
 };
 
 exports.updateCartProductItem = async (userId, data) => {

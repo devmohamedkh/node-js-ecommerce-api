@@ -5,8 +5,8 @@ const { verifyUser } = require("../middleware/verifyToken");
 /*
     method => get 
     route  => api/cart/
-    accses => all 
-    desc   => to get all product in cart
+    accses => only user have the account 
+    desc   => to get cart and product in cart
 */
 app.get("/", verifyUser, cartController.getCart);
 
@@ -14,7 +14,7 @@ app.get("/", verifyUser, cartController.getCart);
     method => post 
     route  => api/product/
     accses => all 
-    desc   => to create product
+    desc   => to add product to cart
 */
 app.post("/", verifyUser, cartController.addProductTocart);
 
@@ -30,7 +30,7 @@ app.delete("/empty-cart", verifyUser, cartController.emptyCart);
     method => post 
     route  => api/product/:id
     accses => only user have the account 
-    desc   => to create product
+    desc   => to remove one product frome cart
 */
 app.delete("/:id", verifyUser, cartController.RemoveProductfromeCart);
 

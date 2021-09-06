@@ -11,6 +11,7 @@ const productRoute = require("./routes/productRoute");
 const categoryRoute = require("./routes/categoryRoute");
 const cartRoute = require("./routes/cartRoute");
 const orderRoute = require("./routes/orderRoute");
+const checkoutRoute = require("./routes/checkoutRoute");
 
 // const adminMiddleware = require("./middleware/adminMiddleware");
 
@@ -43,6 +44,7 @@ app.use("/api/users", userRoute);
 app.use("/api/product", productRoute);
 app.use("/api/category", categoryRoute);
 app.use("/api/cart", cartRoute);
+app.use("/api/checkout", checkoutRoute);
 app.use("/api/order", orderRoute);
 
 connectDB();

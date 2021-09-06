@@ -43,6 +43,7 @@ exports.getCart = async (req, res) => {
       .status(200)
       .json(successResponse(cart, "get cart Successfully!", 201));
   } catch (error) {
+    console.log(error);
     return res.status(400).json(errorResponse("Could not get cart ", 400));
   }
 };
