@@ -10,6 +10,7 @@ ecommerce api using Node js, Express js, and Mongoose.
 * joi
 * jsonwebtoken
 * multer
+* stripe
 
 # Features
 * Create an account, login or logout
